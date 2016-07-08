@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="6.0dip"
+    android:paddingTop="6.0dip"
+    >
+
+    <ImageView
+        android:id="@+id/moments_user_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10.0dip"
+        android:src="@drawable/channel_qq"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/moments_user_name"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="18.0dip"
+        android:layout_toRightOf="@id/moments_user_photo"
+        android:ellipsize="end"
+        android:gravity="left|center"
+        android:includeFontPadding="false"
+        android:padding="0.0dip"
+        android:singleLine="true"
+        android:textSize="16.0sp"
+        android:text="离落风清"
+        android:textColor="#1874CD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16.0sp"
+        android:text="Hello World!"
+        android:id="@+id/moments_send_text"
+        android:layout_alignStart="@+id/moments_user_name"
+        android:layout_alignBottom="@+id/moments_user_photo"
+        android:layout_alignEnd="@+id/moments_user_name" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dip"
+        android:id="@+id/moments_send_photo"
+        android:layout_marginTop="15dp"
+        android:background="#ddd"
+        android:layout_below="@+id/moments_send_text"
+        android:layout_alignStart="@+id/moments_send_text"
+        android:layout_alignEnd="@+id/moments_user_name" />
+    
+    <TextView
+        android:id="@+id/moments_send_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-12-22"
+        android:textSize="16.0sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dip"/>
+
+</RelativeLayout>

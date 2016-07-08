@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.fudan.im.activity.SendMoment"
+    android:background="#F5F5DC">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:layout_above="@+id/moment_add_photo_linearLayout"
+        android:id="@+id/moment_text"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:singleLine="false"
+        android:gravity="top"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="1dip"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/moment_add_photo_linearLayout"
+        android:layout_marginTop="20dip">
+
+        <ImageView
+            android:id="@+id/moment_photo"
+            android:layout_width="120dip"
+            android:layout_height="120dip"
+            android:layout_marginRight="12dip"
+            android:background="@drawable/bg_reg_userhead"
+            android:padding="6dip"
+            android:src="@drawable/ic_common_def_header" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/moment_layout_selectphoto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_default"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_reg_album" />
+
+                <com.fudan.im.view.HandyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dip"
+                    android:layout_weight="1.0"
+                    android:text="相册选取"
+                    android:textColor="@color/font_value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moment_layout_takepicture"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_default"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:src="@drawable/ic_reg_camera" />
+
+                <com.fudan.im.view.HandyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dip"
+                    android:layout_weight="1"
+                    android:text="现在拍摄"
+                    android:textColor="@color/font_value" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/moment_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_default"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/moment_add_photo_linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dip">
+
+        <com.fudan.im.view.HandyTextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.5dip"
+            android:layout_weight="1"
+            android:text="提交"
+            android:textSize="20sp"
+            android:textColor="@color/font_value" />
+    </LinearLayout>
+
+</RelativeLayout>
